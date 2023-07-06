@@ -6,4 +6,4 @@ Em desenvolvimento...🔨
 
 ## Aviso
 
-Algumas funções, como Alterar Email e Excluir Conta podem não funcionar como o esperado caso utilize conta do Google
+A função 'Alterar Email' pode não funcionar como o esperado caso utilize conta do Google
