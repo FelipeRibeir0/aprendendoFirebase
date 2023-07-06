@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Pretty Checkbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Sweet Alert -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <i class="fa fa-window-close" id="exitButton" aria-hidden="true"></i>
+    <section id="cadastroTela" class="hidden">
+      <h2>Cadastro</h2>
+      <form id="formCadastro" autocomplete="off">
+        <input type="text" placeholder="Nome de usuário" id="nome" required>
+        <input type="email" placeholder="exemplo@account.com" id="emailCad" required>
+        <input type="password" placeholder="Senha" id="senha" required>
+        <input type="password" placeholder="Confirmar senha" id="confirmarSenha" required>
+
+        <button type="submit" class="btnInput" id="exitButton">Cadastrar</button>
+      </form>
+      <button id="showLogin" class="btnChangeScreen">Já possui conta? Login</button>
+    </section>
+
+    <section id="loginTela">
+      <h2>Login</h2>
+      <form id="formLogin" autocomplete="off">
+        <input type="email" placeholder="exemplo@account.com" id="email" required>
+        <input type="password" placeholder="Senha" id="password" required>
+
+        <div class="pretty p-icon p-round p-smooth">
+          <input type="checkbox" id="manterLogado">
+          <div class="state p-success">
+            <i class="icon fa fa-check"></i>
+            <label for="manterLogado">Manter Login</label>
+          </div>
+        </div>
+        <span id="esqueceuSenha">Esqueceu a senha?</span>
+        <button type="submit" class="btnInput">Entrar</button>
+      </form>
+      <button type="button" class="loginBtnGoogle">
+        Sign in with Google
+      </button>
+
+      <button id="showCadastro" class="btnChangeScreen">Não possui conta? Cadastre-se</button>
+    </section>
+
+    <section id="recupSenhaTela" class="hidden">
+      <h2>Recuperar senha</h2>
+      <form id="formRecupSenha" autocomplete="off">
+        <input type="email" placeholder="exemplo@account.com" id="emailRecupSenha" required>
+        <button type="submit" class="btnInput">Enviar</button>
+      </form>
+      <button id="backLogin" class="btnChangeScreen">Voltar para Login</button>
+    </section>
+
+  </div>
+
+  <script type="module" src="js/fbconfig.js"></script>
+  <script type="module" src="js/authentication.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.js"></script>
+</body>
+
+</html>

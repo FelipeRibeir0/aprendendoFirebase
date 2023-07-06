@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Sweet Alert -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
+  <title>Usuário</title>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://www.github.com/FelipeRibeir0">Github</a></li>
+      <li class="dropdown">
+          <a class="drpbtn">Alterar <i class="fa fa-chevron-down" id="seta"></i>
+      </a>
+        <div class="drpmenu">
+          <a id="showNomeForm">Nome</a>
+          <a id="showEmailForm">Email</a>
+          <a id="showSenhaForm">Senha</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <header id="header-profile">
+    <button id="logoutButton" class="logout-button">
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <div id="div-profile">
+    </div>
+  </header>
+
+  <section id="nomeForm" class="hidden">
+    <div class="form-box">
+        <i class="fa fa-window-close" id="returnButton" aria-hidden="true"></i> 
+        <form id="mudarNome" autocomplete="off">
+          <h2>Mudar nome</h2>
+          <div class="inputs">
+            <input type="text" id="name" placeholder="Nome" 
+            minlength="2" maxlength="30"  required>
+          </div>
+          <button id="btnInput"><strong>Enviar</strong></button>
+        </form>
+    </div>
+  </section>
+
+  <section id="emailForm" class="hidden">
+    <div class="form-box">
+        <form id="mudarEmail" autocomplete="off">
+          <h2>Mudar email</h2>
+          <div class="inputs">
+            <input type="email" id="email" placeholder="Email"
+            minlength="5" maxlength="150" required>
+          </div>
+          <div class="inputs">
+            <input type="password" id="senha" placeholder="Senha"
+            minlength="6" maxlength="150" required>
+          </div>
+          <button id="btnInput">Enviar</button>
+        </form>
+    </div>
+  </section>
+
+  <section id="senhaForm" class="hidden">
+    <div class="form-box">
+        <form id="mudarSenha" autocomplete="off">
+          <h2>Mudar senha</h2>
+          <div class="inputs">
+            <input type="password" id="senhaAntiga" placeholder="Senha antiga" 
+            minlength="6" maxlength="150" required>
+          </div>
+          <div class="inputs">
+            <input type="password" id="senhaNova" placeholder="Senha nova"
+            minlength="6" maxlength="150" required>
+          </div>
+          <div class="inputs">
+            <input type="password" id="confirmarSenha" placeholder="Confirmar senha" 
+            minlength="6" maxlength="150" required>
+          </div>
+          <button id="btnInput">Enviar</button>
+        </form>
+    </div>
+  </section>
+
+  <section>
+  <div id="dados">
+  </div>
+</section>
+
+  <button id="deleteAccount">
+    <i class="fa fa-trash"></i>
+  </button>
+
+  <script type="module" src="js/profile.js"></script>
+  <script type="module" src="js/fbconfig.js"></script>
+
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.js"></script>
+
+</body>
+</html>
